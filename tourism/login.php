@@ -30,7 +30,7 @@
 <body>
     <ul>
         <li>
-            <a href="signup.php">register</a>
+            <a href="signup.php"> <b> <i> Register </i> </b></a>
         </li>
     </ul>
     <fieldset>

@@ -26,9 +26,8 @@
 
                         <a href="blog.php">BLOG</a>
                    
-                        <a href="profile.php"><?php echo $_SESSION['login_user']['username'];?></a>
+                        <a href="profile.php" style="text-transform: uppercase"><?php echo $_SESSION['login_user']['username'];?></a>
                    
-                        <a href="EditProfile.php">EDIT PROFILE</a>
                     
                         <a href="logout.php">LOGOUT</a>
                 

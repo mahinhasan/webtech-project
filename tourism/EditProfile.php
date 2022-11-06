@@ -5,16 +5,12 @@
     <head>
         <title>form</title>
         <style>
-            h1{
-                text-align: center;
-                color: black;
-            }
         </style>
     </head>
     <body>
             <table border="1" align="center" >
                 <tr>
-                    <td  colspan="2" bgcolor="yellow"><h1>EDIT PROFILE INFO</h1></td>
+                    <td  colspan="2"><h1>EDIT PROFILE INFO</h1></td>
                 </tr>
                 <tr>
                     <th>DASHBORD</th>
@@ -44,7 +40,7 @@
 
                         <body>
                             <fieldset>
-                               <legend align="center"><h3 style="color:brown">EDIT PROFILE</h3></legend>
+                               <legend align="center"><h3>EDIT PROFILE</h3></legend>
                                   <table align="center">
                                         <form method="post" action="location:editprofileCheck.php" enctype="">
              <tr>

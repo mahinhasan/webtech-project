@@ -14,7 +14,7 @@
             //print_r($user);
             if(trim($user[0]) == $username && trim($user[1]) == $password){
                 setcookie('status', 'true', time()+3600, '/');
-                $login_user = ['username'=> $user[0],  'email'=>$email[2]];
+                $login_user = ['username'=> $user[0],  'email'=>$user[2]];
                 $_SESSION['login_user'] = $login_user;
                 if($user[0] == 'admin'){
                     $su = true;

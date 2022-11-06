@@ -1,16 +1,34 @@
 <?php
-include 'home.php';
-if (!isset($_SESSION['username'])) {
-    include "not_found.php";
-    exit;
-}
+    session_start();
+    $username = $_POST['username'];
+    $email = $_POST['email'];
 
-$username = $_SESSION['username'];
-$user = GetUserInfo($username);
-$msg = "";
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if($username == ""){
+        header('location: EditProfile.php?err=null');
+    }else{
 
-    $user = updateINFO($_POST, $username);
-    $msg = "Value updated successfully";
-}
+        $file = fopen('user.txt','r');
+        while(!feof($file)){
+            $data = fgets($file);
+            $user = explode("|",$data);
+
+            if(trim($user[0] == $username)){
+                $old = trim($user[1]);
+                $final = str_replace($old,$email,$data);
+                file_put_contents('user.txt',$final);
+
+                header('location: home.php');
+                break;
+
+            }
+            
+            
+        }
+
+
+
+
+
+
+    }
 ?>

@@ -12,16 +12,19 @@
             <br><br><br>
                 <table align="center">
           <tr>
-            <td><h2 style="color:brown">
+            <td><h2 style="text-transform: uppercase">
     <?php
     session_start();
-     echo $_SESSION['login_user']['username'];?></h2>
+     echo "Name: ".$_SESSION['login_user']['username']."<br>"; 
+      echo "Email: ".$_SESSION['login_user']['email'];?>
+    </h2>
             </td>
           </tr>
           <tr>
             <td align="center">
               <a href="logout.php">LOGOUT
                 </a>
+                <a href="EditProfile.php">EDIT PROFILE</a>
             </td>
           </tr>
             </table>

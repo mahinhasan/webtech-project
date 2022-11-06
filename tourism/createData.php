@@ -12,10 +12,9 @@
     $file = fopen('posts.txt', 'a');
     fwrite($file, $new_post);
     if(move_uploaded_file($src, $des)){
-        header('location:index.php');
+        header('location:home.php');
     }else{
         echo "Error";
     }
-    
 
 ?>

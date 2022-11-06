@@ -6,7 +6,7 @@
     if($username == "" || $password == ""){
         header('location: login.php?err=null');
     }else{
-        $file = fopen('users.txt', 'r');
+        $file = fopen('user.txt', 'r');
         $status = false;
         while(!feof($file)){
             $data = fgets($file);
@@ -19,7 +19,7 @@
         }
         
         if($status){
-            header('location: index.php');
+            header('location: home.php');
         }else{
             header('location: login.php?err=invalid');
         }

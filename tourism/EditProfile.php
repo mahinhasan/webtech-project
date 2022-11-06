@@ -1,20 +1,4 @@
-<?php 
 
-    if(isset($_GET['err'])){
-        if($_GET['err'] == 'null'){
-            echo "invalid username/password";
-        }
-
-        if($_GET['err'] == 'invalid'){
-            echo "username/password not found ...";
-        }
-
-        if($_GET['err'] == 'bad_request'){
-            echo "please login first ...";
-        }
-    }
-
-?>
 
 
 <html>
@@ -76,19 +60,12 @@
                 <input type="email" name="email" value=""/>
                 </td>
             </tr>
-            
-            <tr>
-                <td>DATE OF BIRTH</td>
-                <td>
-                <input type="date" name="dob" value=""/>
-                </td>
-            </tr>
             <tr>
                 <td><input type="submit" name="btn" value="Update" /><br /></td>
             </tr>
-             <!-- <?php
+              <!-- <?php
             echo $msg;
-            ?>  -->
+            ?>   -->
         </form>
        
 </table>

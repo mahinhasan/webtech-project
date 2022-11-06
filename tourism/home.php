@@ -11,40 +11,112 @@
 <html>
     <head>
         <title>form</title>
-        <style>
-            h1{
-                text-align: center;
-                color: black;
-            }
-        </style>
     </head>
     <body>
             <table border="1" align="center" >
-                <tr>
-                    <td  colspan="2" bgcolor="yellow"><h1>WELCOME TO TOURISM</h1></td>
-                </tr>
-                <tr>
-                    <th>DASHBORD</th>
-                    <th>HOME</th>
-                </tr>
-                <tr>
-                   <td><ul>
-                   <li>
-                        <a href="home.php"> <b> <i>HOME</i> </b></a>
-                    </li>
-                    <li>
-                        <a href="profile.php"> <b> <i>PROFILE</i> </b></a>
-                    </li>
-                    <li>
-                        <a href="EditProfile.php"> <b> <i>EDIT PROFILE</i> </b></a>
-                    </li>
-                    <li>
-                        <a href="logout.php"> <b> <i>LOGOUT</i> </b></a>
-                    </li>
-                </ul></td>
-                    <td align="center"><h2  style="color:green"><b><i>WE ALWAYS MAINTAIN OUR CLINT SAFETY</i></b></h2></td>
+              <tr>
                    
+                    <td><img src="Tourism.png" width="150" height="100" alt=""></td>
+                    <td  colspan="2"><h1 text align="center">WELCOME TO TOURISM</h1>
+                    <hr>
+                        <ul align="center">
+                        
+                        <a href="home.php">HOME</a>
+
+                        <a href="blog.php">BLOG</a>
+                   
+                        <a href="profile.php">PROFILE</a>
+                   
+                        <a href="EditProfile.php">EDIT PROFILE</a>
+                    
+                        <a href="logout.php">LOGOUT</a>
+                
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>TOUR RUNNING</th>
+                    <th> <a href="createPost.php"> CREAT A POST</a></th>
+                    <th>TOUR PLANNING</th>
+                </tr>
+                <tr>
+                   <td><!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Home</title>
+</head>
+<body>
+
+    <!-- <a href="createPost.php">Create New Post</a> -->
+   <h5>
+   <?php
+   
+   $file = fopen('posts.txt', 'r');
+   $status = false;
+   while(!feof($file)){
+       $data = fgets($file);
+       $post = explode("|", $data);
+        foreach($post as $value)
+        {
+            echo $value."<br>";
+            // $files = glob("upload/*.*");
+
+            // for ($i=0; $i<count($files); $i++) {
+            // $image = $files[$i];
+            
+            // echo '<img src="'.$image .'" width="100" height="100" alt="Random image" />'."<br /><br />";
+            // }
+        }
+       
+   }
+
+
+?>
+
+
+</h5>
+
+
+<?php
+
+
+?>
+</body>
+<!-- </html></td>
+                    <td><html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+        <form method="POST" action="createData.php" enctype="multipart/form-data" >
+           <fieldset>
+            <legend align="center"><h3>Creat Your Post</h3></legend>
+            <table>
+            <tr>
+                <td>Place</td>
+                <td><input type="text" name="place" value=""/></td>
+            </tr>
+            <tr>
+                <td>Text</td>
+                <td><textarea type="" name="text" value=""></textarea></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td> <input type="date" name="date" value=""/></td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td> <input type="file" name="myfile" value="" /></td>
+            </tr>
+                <td><input type="submit" name="submit" value="Submit"/></td>
+            </table>
+           </fieldset>
+        </form>
+</body>
+</html></td>
+                   <td></td>
                 </tr>
             </table>
     </body>
-</html>
+</html> -->

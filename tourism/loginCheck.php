@@ -14,11 +14,17 @@
             //print_r($user);
             if(trim($user[0]) == $username && trim($user[1]) == $password){
                 setcookie('status', 'true', time()+3600, '/');
+                if($user[0] == 'admin'){
+                    $su = true;
+                }
                 $status = true;
             }
         }
+        if($su){
+            header('location:admin/admin.php');
+        }
         
-        if($status){
+        else if($status){
             header('location: home.php');
         }else{
             header('location: login.php?err=invalid');

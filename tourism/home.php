@@ -83,7 +83,7 @@
 
 ?>
 </body>
-<!-- </html></td>
+</html></td>
                     <td><html>
 <head>
     <title>File Upload</title>
@@ -119,4 +119,4 @@
                 </tr>
             </table>
     </body>
-</html> -->
+</html>

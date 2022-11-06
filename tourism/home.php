@@ -8,6 +8,7 @@
 ?>
 
 
+
 <html>
     <head>
         <title>form</title>
@@ -36,8 +37,8 @@
                 </tr>
                 <tr>
                     <th>TOUR RUNNING</th>
-                    <th> <a href="createPost.php"> CREAT A POST</a></th>
-                    <th>TOUR PLANNING</th>
+                    <th> <a href="createPost.php"> CREATE A POST</a></th>
+                    <th> <a href="createTour.php"> TOUR PLANNING </a></th>
                 </tr>
                 <tr>
                    <td><!DOCTYPE html>
@@ -52,7 +53,7 @@
    <h5>
    <?php
    
-   $file = fopen('posts.txt', 'r');
+   $file = fopen('newtour.txt', 'r');
    $status = false;
    while(!feof($file)){
        $data = fgets($file);
@@ -84,38 +85,52 @@
 ?>
 </body>
 </html></td>
-                    <td><html>
+                    <td><!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>File Upload</title>
+ 
+    <title>Home</title>
 </head>
 <body>
-        <form method="POST" action="createData.php" enctype="multipart/form-data" >
-           <fieldset>
-            <legend align="center"><h3>Creat Your Post</h3></legend>
-            <table>
-            <tr>
-                <td>Place</td>
-                <td><input type="text" name="place" value=""/></td>
-            </tr>
-            <tr>
-                <td>Text</td>
-                <td><textarea type="" name="text" value=""></textarea></td>
-            </tr>
-            <tr>
-                <td>Date</td>
-                <td> <input type="date" name="date" value=""/></td>
-            </tr>
-            <tr>
-                <td>Image</td>
-                <td> <input type="file" name="myfile" value="" /></td>
-            </tr>
-                <td><input type="submit" name="submit" value="Submit"/></td>
-            </table>
-           </fieldset>
-        </form>
-</body>
-</html></td>
-                   <td></td>
+
+    <!-- <a href="createPost.php">Create New Post</a> -->
+   <h5>
+   <?php
+   
+   $file = fopen('newposts.txt', 'r');
+   $status = false;
+   while(!feof($file)){
+       $data = fgets($file);
+       $post = explode("|", $data);
+        foreach($post as $value)
+        {
+            // for($i=0;$i<(count($value));$i++){
+            //      echo $i;  
+            // }
+            echo $value."<br>";
+            // $files = glob("upload/*.*");
+
+            // for ($i=0; $i<count($files); $i++) {
+            // $image = $files[$i];
+            
+            // echo '<img src="'.$image .'" width="100" height="100" alt="Random image" />'."<br /><br />";
+            // }
+        }
+       
+   }
+
+
+?>
+
+
+</h5>
+
+
+<?php
+
+
+?></td>
+                   <td><a href=""></a></td>
                 </tr>
             </table>
     </body>

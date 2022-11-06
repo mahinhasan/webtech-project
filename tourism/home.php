@@ -24,7 +24,7 @@
                         
                         <a href="home.php">HOME</a>
 
-                        <a href="blog.php">BLOG</a>
+                        <a href="Blog/blog.php">BLOG</a>
                    
                         <a href="profile.php" style="text-transform: uppercase"><?php echo $_SESSION['login_user']['username'];?></a>
                    

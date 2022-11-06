@@ -26,7 +26,7 @@
 
                         <a href="blog.php">BLOG</a>
                    
-                        <a href="profile.php">PROFILE</a>
+                        <a href="profile.php"><?php echo $_SESSION['login_user']['username'];?></a>
                    
                         <a href="EditProfile.php">EDIT PROFILE</a>
                     

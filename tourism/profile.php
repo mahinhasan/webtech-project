@@ -12,13 +12,15 @@
             <br><br><br>
                 <table align="center">
           <tr>
-            <td><h2 style="color:brown">User Profile</h2>
+            <td><h2 style="color:brown">
+    <?php
+    session_start();
+     echo $_SESSION['login_user']['username'];?></h2>
             </td>
           </tr>
           <tr>
             <td align="center">
-              <a href="logout.php">
-              <input type="submit" name="btn" value="Logout">
+              <a href="logout.php">LOGOUT
                 </a>
             </td>
           </tr>

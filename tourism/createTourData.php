@@ -4,7 +4,7 @@
 //print_r($_FILES);
 
 $src = $_FILES ['myfile']['tmp_name'];
-$des ="tourimage".$_FILES['myfile']['name'];
+$des ="tourimage/".$_FILES['myfile']['name'];
 $place = $_POST['place'];
 $date = $_POST['date'];
 $text = $_POST['text'];

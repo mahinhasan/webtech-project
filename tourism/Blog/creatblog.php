@@ -2,7 +2,7 @@
 <?php 
     session_start();
     if(!isset($_COOKIE['status'])){
-        header('location: login.php?err=invalid');
+        header('location: ../login.php?err=invalid');
     }
 
 ?>
@@ -21,13 +21,13 @@
                     <hr>
                         <ul align="center">
                         
-                        <a href="home.php">HOME</a>
+                        <a href="../home.php">HOME</a>
 
-                        <a href="blog.php">BLOG</a>
+                        <a href="Blog/blog.php">BLOG</a>
                    
                         
                     
-                        <a href="logout.php">LOGOUT</a>
+                        <a href="../logout.php">LOGOUT</a>
                 
                         </ul>
                     </td>
@@ -49,17 +49,7 @@
    <h5>
    <?php
    
-   $file = fopen('newtour.txt', 'r');
-   $status = false;
-   while(!feof($file)){
-       $data = fgets($file);
-       $post = explode("|", $data);
-        foreach($post as $value)
-        {
-            echo $value."<br>";
-        }
-       
-   }
+ 
 
 
 ?>
@@ -72,7 +62,7 @@
                       <title>File Upload</title>
                   </head>
                   <body>
-                          <form method="POST" action="creatpostData.php" enctype="multipart/form-data" >
+                          <form method="POST" action="blogdata.php" enctype="multipart/form-data" >
                              <fieldset>
                               <legend align="center"><h3>CREATE YOUR POST</h3></legend>
                               <table >

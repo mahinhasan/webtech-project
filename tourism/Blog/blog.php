@@ -8,7 +8,37 @@
 </head>
 <body>
     <h1>welcome to blog</h1>
-    
+    <a href="creatblog.php">Create You own</a>
+
+    <h5>
+   <?php
+   
+   $file = fopen('blogs.txt', 'r');
+   $status = false;
+   while(!feof($file)){
+       $data = fgets($file);
+       $post = explode("|", $data);
+        foreach($post as $value)
+        {
+            echo $value."<br>";
+            // $files = glob("upload/*.*");
+
+            // for ($i=0; $i<count($files); $i++) {
+            // $image = $files[$i];
+            
+            // echo '<img src="'.$image .'" width="100" height="100" alt="Random image" />'."<br /><br />";
+            // }
+        }
+        echo "<hr>";
+       
+   }
+
+
+?>
+
+
+</h5>
+
 
 </body>
 </html>

@@ -24,7 +24,7 @@
                         
                         <a href="home.php">HOME</a>
 
-                        <a href="blog.php">BLOG</a>
+                        <a href="blog/blog.php">BLOG</a>
                    
                         <a href="profile.php">PROFILE</a>
                    

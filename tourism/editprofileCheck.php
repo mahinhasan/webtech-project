@@ -2,6 +2,7 @@
     session_start();
     $username = $_POST['username'];
     $email = $_POST['email'];
+   
 
     if($username == ""){
         header('location: EditProfile.php?err=null');
@@ -13,11 +14,11 @@
             $user = explode("|",$data);
 
             if(trim($user[0] == $username)){
-                $old = trim($user[1]);
+                $old = $user[0];
                 $final = str_replace($old,$email,$data);
                 file_put_contents('user.txt',$final);
 
-                header('location: home.php');
+                header('location: login.php');
                 break;
 
             }

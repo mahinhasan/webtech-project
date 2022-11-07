@@ -46,14 +46,14 @@
              <tr>
                 <td>NAME</td>
                 <td>
-                <input type="text" name="username" value=""/>
+                <input type="text" name="username" value="<?php session_start(); echo $_SESSION['login_user']['username']; ?>"/>
                 </td>
             </tr>
 
             <tr>
                 <td>EMAIL</td>
                 <td>
-                <input type="email" name="email" value=""/>
+                <input type="email" name="email" value="<?php  echo $_SESSION['login_user']['email']; ?>"/>
                 </td>
             </tr>
             <tr>

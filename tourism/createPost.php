@@ -10,7 +10,7 @@
 
 <html>
     <head>
-        <title>form</title>
+        <title>post</title>
     </head>
     <body>
             <table border="1" align="center" >

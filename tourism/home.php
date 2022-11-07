@@ -11,7 +11,7 @@
 
 <html>
     <head>
-        <title>form</title>
+        <title>home</title>
     </head>
     <body>
             <table border="1" align="center" >
@@ -91,7 +91,7 @@
 <body>
 
     <!-- <a href="createPost.php">Create New Post</a> -->
-   <h5>
+   <h5 >
    <?php
    
    $file = fopen('newposts.txt', 'r');
@@ -104,7 +104,7 @@
             // for($i=0;$i<(count($value));$i++){
             //      echo $i;  
             // }
-            echo $value."<br>";
+            echo $value."<br>"."<hr>";
             // $files = glob("upload/*.*");
 
             // for ($i=0; $i<count($files); $i++) {

@@ -1,7 +1,32 @@
 
 
 
+
+
+
 <html>
+    <head>
+        <title>form</title>
+        <style>
+        </style>
+    </head>
+    <body>
+            <table border="1" align="center" >
+                <tr>
+                    <td  colspan="2" ><h1 align="center">USER PROFILE</h1></td>
+                </tr>
+               
+                <tr>
+                   <td><ul>
+                   <li>
+                        <a href="EditProfile.php"> <b> <i>EDIT PROFILE</i> </b></a>
+                    </li>
+                    <li>
+                        <a href="logout.php"> <b> <i>LOGOUT</i> </b></a>
+                    </li>
+                </ul></td>
+                    <td align="center">
+                    <html>
 <head>
   <title>User</title>
 </head>
@@ -21,11 +46,6 @@
             </td>
           </tr>
           <tr>
-            <td align="center">
-              <a href="logout.php">LOGOUT
-                </a>
-                <a href="EditProfile.php">EDIT PROFILE</a>
-            </td>
           </tr>
             </table>
             <br><br><br>      
@@ -33,4 +53,39 @@
         </form>
     </body>
 </html>
+</td>
+                   
+                </tr>
+            </table>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -40,13 +40,10 @@
                     <th> <a href="createTour.php"> TOUR PLANNING </a></th>
                 </tr>
                 <tr>
-                   <td><!DOCTYPE html>
-<html lang="en">
-<head>
- 
-    <title>Home</title>
-</head>
-<body>
+                   <td>
+
+
+
 
     <!-- <a href="createPost.php">Create New Post</a> -->
    <h5>
@@ -59,6 +56,7 @@
        $post = explode("|", $data);
         foreach($post as $value)
         {
+         
             echo $value."<br>";
             // $files = glob("upload/*.*");
 

@@ -13,13 +13,14 @@
             $user = explode("|", $data);
             //print_r($user);
             if(trim($user[0]) == $username && trim($user[1]) == $password){
+                $status = true;
                 setcookie('status', 'true', time()+3600, '/');
                 $login_user = ['username'=> $user[0],  'email'=>$user[2]];
                 $_SESSION['login_user'] = $login_user;
                 if($user[0] == 'admin'){
                     $su = true;
                 }
-                $status = true;
+                
             }
         }
         if($su){

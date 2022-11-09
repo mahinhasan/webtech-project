@@ -81,7 +81,7 @@
                               </tr>
                               <tr>
                                   <td>Image</td>
-                                  <td> <input type="file" name="myfile" value="" /></td>
+                                  <td> <input type="file" name="file-input" value="" /></td>
                               </tr>
                                   <td><input type="submit" name="submit" value="Submit"/></td>
                               </table>

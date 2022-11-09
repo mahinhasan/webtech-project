@@ -11,7 +11,7 @@
     $result = mysqli_query($conn,$data);
 
     if($result){
-        echo "<br>Success";
+        header('location:diplayProducts.php');
     }
     else{
         echo "Error";

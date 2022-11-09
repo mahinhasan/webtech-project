@@ -1,10 +1,22 @@
+<?php 
+    if(!empty($response)) 
+    { 
+        echo $response["type"]; 
+        echo $response["message"];
+
+        if(isset($_GET['place'])){
+            if($_GET['place'] == 'null'){
+                echo "You Must Enter a place Name";
+            }        
+
+        }   
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
 </head>
 <body>
     <h1>welcome to blog</h1>
@@ -12,27 +24,38 @@
 
     <h5>
    <?php
-   
-   $file = fopen('blogs.txt', 'r');
-   $status = false;
-   while(!feof($file)){
-       $data = fgets($file);
-       $post = explode("|", $data);
-        foreach($post as $value)
-        {
-            echo $value."<br>";
-            // $files = glob("upload/*.*");
-
-            // for ($i=0; $i<count($files); $i++) {
-            // $image = $files[$i];
+   if(file_exists('blogs.txt')){
+    $file = fopen('blogs.txt', 'r');
+    $status = false;
+    while(!feof($file)){
+        $data = fgets($file);
+        $post = explode("|", $data);
+        $files = glob("image/*.*",GLOB_BRACE);
+         foreach($post as $value )
+         {
+             echo $value."<br>";
             
-            // echo '<img src="'.$image .'" width="100" height="100" alt="Random image" />'."<br /><br />";
-            // }
-        }
-        echo "<hr>";
-       
+            foreach($files as $f){
+                printf("<img src='image/%s' />",basename($f));
+            }
+             
+             // $files = glob("upload/*.*");
+ 
+             // for ($i=0; $i<count($files); $i++) {
+             // $image = $files[$i];
+             
+             // echo '<img src="'.$image .'" width="100" height="100" alt="Random image" />'."<br /><br />";
+             // }
+         }
+         echo "<hr>";
+        
+    }
+ 
    }
-
+   else{
+    echo "File Does not exist";
+   }
+   
 
 ?>
 

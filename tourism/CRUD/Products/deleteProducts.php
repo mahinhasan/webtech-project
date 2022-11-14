@@ -4,7 +4,7 @@ use LDAP\Result;
 
     if(isset($_GET['name'])){
         $name = $_GET['name'];
-        $sql = "DELETE FROM `phone` WHERE Name='$name'";
+        $sql = "DELETE FROM `phone` WHERE Name ='$name'";
         $result = mysqli_query($conn,$sql);
 
         if($result){

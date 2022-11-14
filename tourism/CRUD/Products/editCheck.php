@@ -1,15 +1,15 @@
 <?php
     include 'connect.php';
-
-    if(isset($_POST['submit'])){
+    $name = $_GET['name'];
+    if(isset($_POST['update'])){
         $pname = $_POST['iteamname'];
         $bprice = $_POST['buy'];
         $sprice = $_POST['sell'];
         $profit = $sprice - $bprice;
         
-        //echo "Product : ".$pname."<br>"." Buy Price : ".$bprice."<br>"." Selling Price : ".$sprice;  
         
-        $data = "INSERT INTO phone  VALUES ('{$pname}', '{$bprice}', '{$sprice}', '{$profit}');";
+        $data = "UPDATE phone SET Name = '$pname', bprice = $bprice,sprice=$sprice,profit=$profit WHERE Name='$name'";
+        
         $result = mysqli_query($conn,$data);
     
         if($result){
@@ -18,11 +18,7 @@
         else{
             echo "Error";
         }
+    }else{
+        echo "Sorry!";
     }
-
-
-
-
-
-
 ?>

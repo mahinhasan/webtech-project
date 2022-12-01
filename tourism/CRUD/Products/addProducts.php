@@ -18,7 +18,7 @@
             <hr>
             <input type="checkbox" id="display" name="display">
             <label for="display"> Display</label><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" name="submit">
         </form>
     </fieldset>
 </body>

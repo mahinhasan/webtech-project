@@ -9,14 +9,16 @@
 
 <body>
 <section>
-    <div class="Topbar">
+    
+      <div class="Topbar">
       <div class="top">
-        <p>We're here to provide 24/7 at your service</p>
+      <marquee><p>We're here to provide 24/7 at your service</p></marquee>
       </div>
        <div class="top">
-        <p><i class="fas fa-phone-alt"></i>01744863036 <i class="far fa-envelope"></i> Toursim.com@hotmail.com</p>
+       <marquee><p><i class="fas fa-phone-alt"></i>01744863036 <i class="far fa-envelope"></i> Toursim@hotmail.com</p></marquee>
        </div>
     </div>
+    
     <header>
      <img  id="logo" src="assets/images/logo.png" alt=""> 
         <nav class=""  >
@@ -29,7 +31,7 @@
                 <li><a href="">Place</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Planning</a></li>
-                <li><a href="">Gallery</a></li>
+                <li><a href="views/users/map.php">Map</a></li>
                 <li><a href="">Contact Us</a></li>
               </ul>
         </nav>
@@ -39,8 +41,7 @@
     <section>
       <div class="">
         <div class="bgimg">
-          
-           <img src="images>/hero-bg.jpeg" alt=""> 
+           <!-- <img src="images>/hero-bg.jpeg" alt="">  -->
           <h1 id="find">Find Your Next<br>
             Tour Destinations</h1>
            <div class="search">

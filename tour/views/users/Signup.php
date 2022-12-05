@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../views/css/signupp.css">
-    <script defer src="../../controllers/signupValidation.js"></script>
+    <script src="../controllers/signupValidation.js"></script>
 </head>
 <body>
     <div class="container">
@@ -38,5 +38,25 @@
             <button type="submit">Sign Up</button>
         </form>
     </div>
+    <script>
+        function ajax(){
+            let name = document.getElementById('name').value;
+            let xhttp = new XMLHttpRequest();
+
+
+            xhttp.open('POST', 'signupCheck.php', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send('name='+name);
+            xhttp.onreadystatechange = function(){
+                
+                if(this.readyState == 4 && this.status == 200){
+                    alert(this.responseText);
+                    document.getElementsByTagName('h1')[0].innerHTML = this.responseText;
+                }
+                
+            }
+        }
+    </script>
+
 </body>
 </html>

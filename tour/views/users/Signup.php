@@ -1,62 +1,64 @@
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign up</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../views/css/signupp.css">
-    <script src="../controllers/signupValidation.js"></script>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../../Views/css/signupp.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <script src="../../controllers/signupValidation.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <form id="form" action="../../controllers/signupCheck.php" method="POST" enctype="">
-            <h1>Registration</h1>
-            <div class="input-control">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="text">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="password">Password</label>
-                <input id="password"name="password" type="password">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="password2">Password again</label>
-                <input id="password2"name="password2" type="password">
-                <div class="error"></div>
-            </div>
-            <button type="submit">Sign Up</button>
-        </form>
-    </div>
-    <script>
-        function ajax(){
-            let name = document.getElementById('name').value;
-            let xhttp = new XMLHttpRequest();
+  <div class="signup-box"> <br>
+    <h1 style="font-family: Sans-serif ; color: #12044e; font-style: italic ">Sign Up</h1>
+
+    <form name="signupform" onsubmit="return form()" action="../../Controllers/signupCheck.php" method="POST">
 
 
-            xhttp.open('POST', 'signupCheck.php', true);
-            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhttp.send('name='+name);
-            xhttp.onreadystatechange = function(){
-                
-                if(this.readyState == 4 && this.status == 200){
-                    alert(this.responseText);
-                    document.getElementsByTagName('h1')[0].innerHTML = this.responseText;
-                }
-                
-            }
-        }
-    </script>
 
+      <label for="username"></label> <br> <br>
+      <input  type=" text" name="username" id="username" placeholder="username" />
+      <small class="validate" id="usernameerror"></small>   
+
+
+      <label style="font-family: Sans-serif ; color: #12044e" for="usertype"> Choose your role:</label>
+      <select name="usertypes">
+        <option value=""></option>
+        <option value="admin">admin</option>
+        <option value="customer">customer</option>
+        <option value="manager">manager</option>
+        <option value="tourguide">tourguide</option>
+      </select>
+
+
+
+      <label for="email"></label> 
+      <input type="email" name="email" id="email" placeholder="Email" />
+     <center> <small class="validate" id="emailerror"></small></center> 
+
+
+      <label for="userpassword"></label> 
+      <input type="password" name="password" id="password" placeholder="Password" />
+     <center><small class="validate" id="passworderror"></small></center> 
+
+
+      <label for="password2"></label> 
+      <input type="password" name="password2" id="password2" placeholder="Confirm Password" />
+     <center> <small class="validate" id="password2error" ></small> </center>
+
+
+      <label for="submit"></label> 
+      <input style="margin-top:10px" id="btn" type="submit" name="Submit" value="submit">
+
+
+
+
+    </form>
+
+  </div>
+  <p class="para-2">
+    Already have an account? <a href="login.php">Login here</a>
+  </p>
 </body>
+
 </html>

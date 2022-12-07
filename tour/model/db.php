@@ -1,16 +1,16 @@
-<?php
+<?php 
 
-	$dbuser = 'root';
-	$dbpass = '';
-	$host 	= 'localhost';
-	$dbname	= 'login';
+    $host = "localhost";
+    $dbuser = "root";
+    $dbpass = "";
+    $dbname= "tourism";
 
-
-	function getConnection(){
-
-		global $dbname, $dbpass, $dbuser, $host;
-		$conn = mysqli_connect($host, $dbuser, $dbpass, $dbname);
-		return $conn;
-	}
+    function getConnection(){
+        global $host;
+        global $dbname;
+        global $dbpass;
+        global $dbuser;
+        return $con = mysqli_connect($host, $dbuser, $dbpass, $dbname);
+    }
 
 ?>

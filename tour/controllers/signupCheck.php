@@ -1,23 +1,48 @@
+
+
 <?php
-    session_start();
+session_start();
+require_once('../model/usersmodel.php');
+
+if(isset($_POST['submit'])){
+
     $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
-    $email = $_POST['email'];
+    $usertype = $_POST['usertypes']; 
+}
 
-    if($username == "" || $password == "" || $email == "" || $password2 == ""){
-        header('location: ../views/users/Signup.php');
-    }else{      
-        
-        $con = mysqli_connect('localhost', 'root', '', 'tourism');
-        $sql = "insert into users values('{$username}', '{$email}','{$password}','{$password2}' )";
-        $result = mysqli_query($con, $sql);
-        
-        if($result){
-            header('location: ../views/users/login.php');
-        }else{
-           echo "DB error";
-        }
-    }
 
+    ?>
+    
+<script>
+    if(        (usernameerror ||
+            emailerror ||
+            passworderror ||
+            password2error) == false) {
+</script>
+    <?php
+
+            $conn = getConnection();
+                $userinfo = [
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => $password,
+                    'password2' => $password2,
+                    'usertypes' => $usertype
+                ];
+            
+                $status = insertUser($userinfo);
+                if($status){
+                    header('location: ../Views/users/Login.php');
+                }else{
+                    echo "failed to insert!";
+                       }
+            
+      
 ?>
+
+<script>
+                    }
+</script>

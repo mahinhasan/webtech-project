@@ -16,7 +16,10 @@
 
 
     <main>
-        <input type="submit" value="Add Hotel">
+        <form method="post" action="hotelAdd.php">
+            <input type="submit" value="Add Hotel">
+        </form>
+
         <div class="cards">
 
             <div class="card-single">
@@ -28,7 +31,7 @@
                     <span class="fas fa-users"></span>
                 </div>
             </div>
-             </div>
+        </div>
 
         </div>
     </main>

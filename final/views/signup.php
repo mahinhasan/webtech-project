@@ -40,7 +40,7 @@ include '../../views/header.php';
                         </p>
                         <p>
                             <label>Re type-password<span>*</span></label>
-                            <input type="password" placeholder="Password" name="re-password" required>
+                            <input type="password" placeholder="Password" name="rpassword" required>
                         </p>
                         <p>
                             <label>Email address<span>*</span></label>

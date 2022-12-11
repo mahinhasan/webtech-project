@@ -12,7 +12,14 @@
 </head>
 
 <body>
-   
+    <?php
+          require_once "../models/blogModel.php";
+          $data = displayAllTable();
+
+    $row = mysqli_num_rows($data); 
+
+    ?>
+
     <input type="checkbox" id="nav-toggle">
 
     <div class="sidebar">
@@ -60,7 +67,7 @@
             </h2>
             <div class="search-wrapper">
                 <span class="fas fa-search"></span>
-                <input type="search" placeholder="search here">
+                <input type="search" placeholder="search here" name='search'>
             </div>
             <div class="user-wrapper">
                 <img src="images/my.jpg" alt="">
@@ -108,8 +115,8 @@
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>10</h1>
-                        <span>Task</span>
+                        <h1><?php echo $row ?></h1>
+                        <span>Blog</span>
                     </div>
                     <div>
                         <span class="fas fa-clipboard-list"></span>
@@ -160,6 +167,29 @@
             </div>
         </main>
     </div>
+
+
+
+    <script>
+
+        function showResult(str) {
+            if str.length == 0) {
+                document.getElementById("search").innerHTML = "";
+                document.getElementById("search").style.border = "0px";
+                return;
+            }
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("search").innerHTML = this.responseText;
+                    document.getElementById("search").style.border = "1px solid #A5ACB2";
+                }
+            }
+            xmlhttp.open("GET", "search.php?q=" + str, true);
+            xmlhttp.send();
+        }
+
+    </script>
 </body>
 
 </html>

@@ -19,14 +19,7 @@
                 <li><a href="about.asp">About</a></li>
                 <li><a href="about.asp">Author</a></li>
                 <li><a href="news.asp">Travel News</a></li>
-                <li><a href="contact.asp">Travel Episode</a></li>
-                <li><a href="about.asp">Inspiration</a></li>
-                <li><a href="contact.asp">Explore</a></li>
-                <li><a href="contact.asp">place</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="admin.php">Admin</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="planing.php">Planning</a></li>
+
                 
 
             </ul>
@@ -37,11 +30,7 @@
         </div>
 
     </div>
-    <div class="head">
-        <div class="logo">
-            <h3> Tour <span> World </span> GO</h3>
-        </div>
-    </div>
+  
 
 
 

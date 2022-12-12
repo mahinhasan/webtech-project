@@ -7,14 +7,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/planing.css">
+    <script src="../assets/js/planing.js"></script>
     <title>planing</title>
 </head>
 
 <body>
+   
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Create Plane</a>
+        <a href="createPlane.php">Create Plane</a>
         <a href="#">Runnig</a>
         <a href="#">Contact</a>
     </div>

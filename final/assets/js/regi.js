@@ -5,14 +5,14 @@ function validate() {
       document.myForm.passeord.focus();
       return false;
     }
-    if (document.myForm.passeord.value == "") {
-      alert("Please provide your Email!");
-      document.myForm.passeord.focus();
+    if (document.myForm.password.value == "") {
+      alert("Please provide your password!");
+      document.myForm.password.focus();
       return false;
     }
   
     if (document.myForm.usertype.value == "-1") {
-      alert("Please provide your country!");
+      alert("Please provide your usertype!");
       return false;
     }
     return (true);

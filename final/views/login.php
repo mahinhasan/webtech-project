@@ -1,15 +1,15 @@
-<html >
+<html>
 
 <head>
     <script src="../assets/js/login.js"></script>
 </head>
 
 <body>
-<?php include_once('navbar.php'); ?>
+    <?php include_once('navbar.php'); ?>
 
     <fieldset>
         <legend> <b> LOGIN </b></legend>
-        <form name="myForm" action="../controllers/users/loginCheck.php" method="post" onsubmit="return (validate());" >
+        <form name="myForm" action="../controllers/users/loginCheck.php" method="post" onsubmit="return (validate());">
 
 
             <div class="container">
@@ -17,7 +17,7 @@
                 <input type="text" placeholder="Enter Username" name="username"><br>
 
                 <label for="password"><b>Password</b></label><br>
-                <input type="password" placeholder="Enter Password" name="password" ><br>
+                <input type="password" placeholder="Enter Password" name="password"><br>
 
                 <input type="submit" value="Login"><br>
                 <label>

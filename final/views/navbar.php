@@ -17,7 +17,7 @@
                 <li><a href="login.php">Login</a></li>
                 <li><a href="signup.php">Signup</a></li>
                 <li><a href="about.asp">About</a></li>
-                <li><a href="about.asp">Author</a></li>
+                <li><a href="about.php">Author</a></li>
                 <li><a href="news.asp">Travel News</a></li>
 
                 

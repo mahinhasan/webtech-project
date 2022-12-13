@@ -14,7 +14,7 @@ include '../../views/header.php';
 </head>
 
 <body>
-    <?php require 'index.php'; ?>
+    <?php require 'navbar.php'; ?>
 
     <div class="wrapper login">
         <div class="container">
@@ -63,7 +63,7 @@ include '../../views/header.php';
                             <input type="submit" value="Sign In">
                         </p>
                         <p>
-                            <a href="">Forgot password?</a>
+                            <a href="forgetpass.php">Forgot password?</a>
                         </p>
 
                     </form>

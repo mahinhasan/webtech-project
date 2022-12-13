@@ -15,7 +15,7 @@
     <?php require 'index.php'; ?>
 
 
-    <!-- <main>
+    <main>
         <form method="post" action="hotelAdd.php">
             <input type="submit" value="Add Hotel">
         </form>
@@ -34,7 +34,7 @@
         </div>
 
         </div>
-    </main> -->
+    </main>
     </section>
     <!-- image section complete -->
     <main >

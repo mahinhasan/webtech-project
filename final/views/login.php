@@ -30,7 +30,7 @@
             <hr>
 
             <div>
-                <span class="psw">Forgot <a href="#">Forget password?</a></span><br>
+                <span class="psw">  Do you want to remember your password? <a href="forgetpass.php">Forget password</a></span><br>
             </div>
         </form>
         <div id="message">

@@ -5,12 +5,16 @@ function validate() {
   var goodColor = "#66cc66";
   var badColor = "#ff6666";
 
-    if (document.myForm.name.value == "") {
+  if (document.myForm.id.value == "") {
+    alert("Please provide your ID!");
+    document.myForm.id.focus();
+    return false;
+  }
+  if (document.myForm.name.value == "") {
       alert("Please provide your name!");
       document.myForm.name.focus();
       return false;
     }
-<<<<<<< HEAD
     if (document.myForm.password.value == "" ) {
       alert("Please provide your password!");
       document.myForm.password.focus();
@@ -29,11 +33,6 @@ function validate() {
         if (document.myForm.gender.value == "") {
       alert("Please provide your gender!");
       document.myForm.gender.focus();
-=======
-    if (document.myForm.password.value == "") {
-      alert("Please provide your password!");
-      document.myForm.password.focus();
->>>>>>> 69bf2fc7ec5a7438e99574172fc9b95858da775a
       return false;
     }
   
@@ -60,7 +59,7 @@ function validate() {
         {
             pass2.style.backgroundColor = badColor;
             message.style.color = badColor;
-            message.innerHTML = " These passwords don't match";
+            message.innerHTML = " This passwords don't match";
             document.myForm.password.focus();
             return false;
         }

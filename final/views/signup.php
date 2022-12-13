@@ -4,18 +4,21 @@
 
     <title>signup</title>
     <script src="../assets/js/regi.js"></script>
+    <link rel="stylesheet" href="../assets/css/reg.css">
 </head>
 
 <body>
     <?php include_once('navbar.php'); ?>
 
     <fieldset>
-        <legend>
-            <h1>Register</h1>
+        <legend align="center">
+           <div class="form-header"> <h1>Registration</h1></div>
         </legend>
-        <form name="myForm" method="post" action="../controllers/users/regiCheck.php" onsubmit="return (validate());">
-
-            <p>Please fill in this form to create an account.</p>
+          <table class="boxing">
+          <form name="myForm" method="post" action="../controllers/users/regiCheck.php" onsubmit="return (validate());">
+                 <div class="container">
+    
+                    <p><h3  align="center">Please fill in this form to create an account.</h3></p>
             <hr>
             <label for="id"><b>ID : </b></label><br>
             <input type="text" placeholder="Enter Id" name="id"  ><br>
@@ -48,16 +51,19 @@
                 <option value="admin">admin</option>
             </select>
             <hr>
+                 <input type="submit" class="registerbtn" value="Register">
 
+               </div>
 
+ 
 
-            <input type="submit" class="registerbtn" value="Register">
-
-
-
-            <p>Already have an account? <a href="#">Sign in</a>.</p>
+            <div class="container signin">
+                <p>Already have an account? <a href="login.php">Sign in</a>.</p>
+            </div>
 
         </form>
+          </table> 
+        
     </fieldset>
 
 </body>

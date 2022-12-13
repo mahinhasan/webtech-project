@@ -99,3 +99,98 @@ td{
 }
 
 
+ .packege-header {
+        text-align: center;
+        margin-top: 30px;
+        color:#3B82F6 ;
+        font-weight: 900;
+       text-align: center;
+    }
+   
+    
+    .container {
+        
+        
+        padding: 30px;
+        border-radius: 5px;
+        margin-top: 21px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    
+    .image-cards {
+        
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 45px;
+       margin-right: 60px;
+       margin-left: 110px;
+       padding: 10px;
+    }
+    
+    .image-card .image-card-banner img {
+        
+        width: 294px;
+        height: 217px;
+        border-radius: 6px  6px 0 0;
+        transition:1s  filter  ;
+        filter: brightness(100%);
+      
+
+    }
+    .image-card-banner img:hover  {
+        
+        filter: brightness(50%);
+    }  
+.card-details{
+   padding: 10px;
+}
+    .card-details h1 {
+        font-size: 15px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        font-weight: 900;
+        font-family: 'Poppins', sans-serif;
+       
+       
+    }
+    
+    .cards-p {
+        font-size: 15px;
+        font-weight:400;
+        
+      
+    
+    }
+    .fa-bolt{
+        color: rgb(190, 117, 22);
+    }
+    .fa-clock{
+        color: #f6573b;
+    }
+    #price{
+        font-weight: 900;
+        color: rgb(237, 116, 100);
+        font-size: 18px;
+    }
+    
+    .image-card {
+        box-shadow: 0px 5px 20px -10px #111;
+        border-radius: 5px;
+        
+       
+    
+    }
+    .best-resorts{
+        padding-top: 20px;
+        background-color: #EFF6FF;
+        padding-bottom: 20px;
+    }
+    .discount-price{
+        text-decoration:line-through ;
+        color: rgb(143, 83, 88);
+        font-weight: 800;
+
+    }

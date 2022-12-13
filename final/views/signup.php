@@ -29,9 +29,12 @@
 
             <label for="password"><b>Password</b></label><br>
             <input type="password" placeholder="Enter Password" name="password" id="psw" ><br>
+        
 
             <label for="pswrepeat"><b>Repeat Password</b></label><br>
-            <input type="password" placeholder="Repeat Password" name="pswrepeat" id="psw-repeat" ><br>
+            <input type="password" placeholder="Repeat Password" name="pswrepeat" id="pass2" ><br>
+            <div id="error-nwl"></div>
+
             <label for="phone"><b>Enter Phone </b></label><br>
             <input type="text" name="phone" id="phone" ><br>
             <label for="gender"><b>Gender </b></label><br>

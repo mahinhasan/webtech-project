@@ -1,51 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html >
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In Form</title>
-    <link rel="stylesheet" href="../assets/css/SignupCss.css">
+    <script src="../assets/js/login.js"></script>
 </head>
 
 <body>
-<?php require 'index.php'; ?>
-    <div class="wrapper login">
-        <div class="container">
-            <div class="col-left">
-                <div class="login-text">
-                    <h2>Welcome!</h2>
-                    <p>Create your account.<br>For Free!</p>
-                    <a href="signup.php" class="btn">Sign Up</a>
-                </div>
+<?php include_once('navbar.php'); ?>
+
+    <fieldset>
+        <legend> <b> LOGIN </b></legend>
+        <form name="myForm" action="../controllers/users/loginCheck.php" method="post" onsubmit="return (validate());" >
+
+
+            <div class="container">
+                <label for="id"><b>Enter ID</b></label><br>
+                <input type="text" placeholder="Enter Username" name="username"><br>
+
+                <label for="password"><b>Password</b></label><br>
+                <input type="password" placeholder="Enter Password" name="password" ><br>
+
+                <input type="submit" value="Login"><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
             </div>
+            <hr>
 
-            <div class="col-right">
-                <div class="login-form">
-                    <h2>Login</h2>
-                    <form action="">
-                        <p>
-                            <label>Username/Email address<span>*</span></label>
-                            <input type="text" placeholder="Username or Email" required>
-                        </p>
-                        <p>
-                            <label>Password<span>*</span></label>
-                            <input type="password" placeholder="Password" required>
-                        </p>
-                        <p>
-                            <input type="submit" value="Sign In">
-                        </p>
-                        <p>
-                            <a href="">Forgot password?</a>
-                        </p>
-
-                    </form>
-                </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span><br>
             </div>
-
-        </div>
-    </div>
+        </form>
+    </fieldset>
 </body>
 
 </html>

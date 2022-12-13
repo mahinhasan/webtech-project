@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +46,13 @@
         <div class="logo">
             <h3> Tour <span> World </span> GO</h3>
         </div>
+    </div>
+
+    <div>
+        <?php 
+        $id = ($_SESSION['status']);
+        echo($id)   
+        ?>
     </div>
 
 

@@ -10,6 +10,7 @@ function validate() {
       document.myForm.name.focus();
       return false;
     }
+<<<<<<< HEAD
     if (document.myForm.password.value == "" ) {
       alert("Please provide your password!");
       document.myForm.password.focus();
@@ -28,6 +29,11 @@ function validate() {
         if (document.myForm.gender.value == "") {
       alert("Please provide your gender!");
       document.myForm.gender.focus();
+=======
+    if (document.myForm.password.value == "") {
+      alert("Please provide your password!");
+      document.myForm.password.focus();
+>>>>>>> 69bf2fc7ec5a7438e99574172fc9b95858da775a
       return false;
     }
   

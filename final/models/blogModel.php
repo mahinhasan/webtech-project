@@ -17,12 +17,6 @@ function displayAllBlog(){
     return $res;
 }
 
-function displayAllTable(){
-    $conn = getConnection();
-    $sql = "select * from blogs";
-    $blog = mysqli_query($conn, $sql);
-    return $blog;
-}
 
 
 ?>

@@ -15,10 +15,25 @@
     <?php
     require_once "../models/blogModel.php";
     require_once "../models/userModel.php";
-    $data = displayAllTable();
+    require_once "../models/planeModel.php";
+    require_once "../models/guideModel.php";
+    require_once "../models/hotelModel.php";
+
+
+    $data = displayAllBlog();
     $row = mysqli_num_rows($data);
 
+    $u = displayAllUser();
+    $user = mysqli_num_rows($u);
 
+    $t = allPlane();
+    $tour = mysqli_num_rows($t);
+
+    $g = displayAllGuide();
+    $guide = mysqli_num_rows($g);
+
+    $h = allHotel();
+    $hotel = mysqli_num_rows($h);
     ?>
 
     <input type="checkbox" id="nav-toggle">
@@ -80,8 +95,8 @@
             <div class="cards">
                 <div class="card-single">
                     <div>
-                        <h1>51</h1>
-                        <span>Customers</span>
+                        <h1><?php echo $user ?></h1>
+                        <span>Users</span>
                     </div>
                     <div>
                         <span class="fas fa-users"></span>
@@ -89,7 +104,7 @@
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>80</h1>
+                        <h1><?php echo $hotel ?></h1>
                         <span>Hotel</span>
                     </div>
                     <div>
@@ -98,8 +113,8 @@
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>60</h1>
-                        <span>Guid</span>
+                        <h1><?php echo $guide ?></h1>
+                        <span>Guide</span>
                     </div>
                     <div>
                         <span class="fas  fa-people-carry"></span>
@@ -107,8 +122,8 @@
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>120</h1>
-                        <span>Cars</span>
+                        <h1><?php echo $tour ?></h1>
+                        <span>Tours</span>
                     </div>
                     <div>
                         <span class="fas fa-car"></span>

@@ -12,7 +12,7 @@
 <body>
     <?php include_once('index.php');?>
 
-        <form method="post" action="../controllers/blog/blogCheck.php" enctype="">
+        <form method="post"  action="../controllers/blog/blogCheck.php" enctype="">
             <fieldset>
                 <legend>Create Blog</legend>    
                 Title Here: <input type="text" name="title" value=""/> <br>

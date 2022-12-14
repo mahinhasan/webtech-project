@@ -1,8 +1,7 @@
 <?php
-session_start();
-if(isset($_SESSION["username"])){
-    $welcomeMsg = "<p align='right'>Welcome, </p>" .$_SESSION["username"];
-    header("Location:index.php");
+
+if(isset($_SESSION["status"])){
+    header("location:index.php");
 }
 ?>
 
@@ -35,7 +34,7 @@ if(isset($_SESSION["username"])){
                 <input type="submit"  class="loginbtn" value="Login"><br>
                
             </div>
-            <hr>
+         
 
             <div>
                 <span class="psw">  Do you want to remember your password? <a href="forgetpass.php">Forget password</a></span><br>

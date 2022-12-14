@@ -16,7 +16,7 @@
         
 
         if($status){
-            header('location: ../../views/login.php');
+            header('location: ../../views/index.php');
         }else{
            echo "DB error";
         }

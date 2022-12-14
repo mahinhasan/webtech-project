@@ -16,10 +16,8 @@
     require_once "../models/blogModel.php";
     require_once "../models/userModel.php";
     $data = displayAllTable();
-    $users = displayAllUser();
-    
     $row = mysqli_num_rows($data);
-    $user = mysqli_num_rows($users)
+
 
     ?>
 

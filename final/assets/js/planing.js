@@ -1,42 +1,81 @@
+function validate() {
+  var location = document.getElementById('location');
+  var pass2 = document.getElementById('pass2');
+  var message = document.getElementById('error-nwl');
+  var goodColor = "#66cc66";
+  var badColor = "#ff6666";
 
-
-let id = (id) => document.getElementById(id);
-
-let classes = (classes) => document.getElementsByClassName(classes);
-
-let username = id("username"),
-  email = id("email"),
-  password = id("password"),
-  form = id("form"),
-  errorMsg = classes("error"),
-  successIcon = classes("success-icon"),
-  failureIcon = classes("failure-icon");
-
-// Adding the submit event Listener
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  engine(username, 0, "Username cannot be blank");
-  engine(email, 1, "Email cannot be blank");
-  engine(password, 2, "Password cannot be blank");
-});
-
-
-let engine = (id, serial, message) => {
-  if (id.value.trim() === "") {
-    errorMsg[serial].innerHTML = message;
-    id.style.border = "2px solid red";
-
-    // icons
-    failureIcon[serial].style.opacity = "1";
-    successIcon[serial].style.opacity = "0";
-  } else {
-    errorMsg[serial].innerHTML = "";
-    id.style.border = "2px solid green";
-
-    // icons
-    failureIcon[serial].style.opacity = "0";
-    successIcon[serial].style.opacity = "1";
+  if (location.value == "") {
+    alert("Please provide your location!");
+    document.myForm.id.focus();
+    return false; 
   }
-};
+  if (document.myForm.name.value == "") {
+      alert("Please provide your name!");
+      document.myForm.name.focus();
+      return false;
+    }
+    if (document.myForm.password.value == "" ) {
+      alert("Please provide your password!");
+      document.myForm.password.focus();
+      return false;
+    }
+      if (document.myForm.email.value == "") {
+      alert("Please provide your email id!");
+      document.myForm.email.focus();
+      return false;
+    }
+        if (document.myForm.phone.value == "") {
+      alert("Please provide your phone number!");
+      document.myForm.phone.focus();
+      return false;
+    }
+        if (document.myForm.gender.value == "") {
+      alert("Please provide your gender!");
+      document.myForm.gender.focus();
+      return false;
+    }
+  
+    if (document.myForm.usertype.value == "-1") {
+      alert("Please provide your usertype!");
+      return false;
+    }
+
+    if(psw.value.length > 5 && pass2.value.length > 5)
+    {
+        psw.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "character number ok!"
+        
+
+        if(psw.value == pass2.value)
+        {
+            pass2.style.backgroundColor = goodColor;
+            message.style.color = goodColor;
+            message.innerHTML = "ok!";
+            return(true);
+        }
+        else
+        {
+            pass2.style.backgroundColor = badColor;
+            message.style.color = badColor;
+            message.innerHTML = " This passwords don't match";
+            document.myForm.password.focus();
+            return false;
+        }
+        
+    }
+    else
+    {
+        psw.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " you have to enter at least 6 digit!";
+        document.myForm.password.focus();
+        return false;
+    }
+    
+}
+  
+
+
+

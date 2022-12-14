@@ -23,6 +23,7 @@ if ($id == "") {
 
     if ($status) {
         header('location:../../views/login.php');
+        $_SESSION['status'] = $username;
     } else {
         echo "DB error";
     }

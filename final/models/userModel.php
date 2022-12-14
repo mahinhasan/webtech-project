@@ -15,7 +15,12 @@ function login($user)
     }
 }
 
-
+function getUser($username){
+    $con = getConnection();
+    $sql = "Select * from users where username='$username'";
+    $rslt = mysqli_query($con, $sql);
+    return $rslt;
+}
 
 function insertUser($user)
 {
@@ -46,16 +51,16 @@ function getUserById($id)
 }
 
 
-function getUser($id){
-    $con = getConnection();
-    $sql = "select * from users where id='$id'";
-    $result = mysqli_query($con, $sql);
-    $count = mysqli_num_rows($result);
+// function getUser($id){
+//     $con = getConnection();
+//     $sql = "select * from users where id='$id'";
+//     $result = mysqli_query($con, $sql);
+//     $count = mysqli_num_rows($result);
 
-    if($count){
-        return $result; 
-    }
-}
+//     if($count){
+//         return $result; 
+//     }
+// }
 
 function displayAllUser(){
     $conn = getConnection();

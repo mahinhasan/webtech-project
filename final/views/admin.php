@@ -4,8 +4,7 @@
 <head>
     <title>admin</title>
     <link rel="stylesheet" href="../assets/css/adminStyle.css">
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 
@@ -18,6 +17,8 @@
     require_once "../models/planeModel.php";
     require_once "../models/guideModel.php";
     require_once "../models/hotelModel.php";
+    require_once "../models/transportModel.php";
+
 
 
     $data = displayAllBlog();
@@ -34,6 +35,9 @@
 
     $h = allHotel();
     $hotel = mysqli_num_rows($h);
+
+    $tr = allTransport();
+    $transport = mysqli_num_rows($tr);
     ?>
 
     <input type="checkbox" id="nav-toggle">
@@ -140,6 +144,15 @@
                         <span class="fas fa-clipboard-list"></span>
                     </div>
                 </div>
+                <div class="card-single">
+                    <div>
+                        <h1><?php echo $transport ?></h1>
+                        <span>Transport</span>
+                    </div>
+                    <div>
+                        <span class="fas fa-home"></span>
+                    </div>
+                </div>
             </div>
 
             <div class="recent-flex">
@@ -155,25 +168,42 @@
                                     <tr>
                                         <td>Name</td>
                                         <td>Email</td>
-                                        <td>Status</td>
+                                        <td>Phone</td>
+                                        <td>Gender</td>
+                                        <td>User Type</td>
+                                        <td>function</td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Sabbir</td>
-                                        <td>s@gmail.com</td>
-                                        <td>Admin</td>
+                                        <?php
+                                        $u = displayAllUser(); 
+                                        if ($user) {
+                                            while ($data = mysqli_fetch_array($u)) {
+                                                $id = $data['id'];
+                                                $name = $data['username'];
+                                                $email = $data['email'];
+                                                $phone = $data['phone'];
+                                                $gender = $data['gender'];
+                                                $usertype = $data['usertype'];
+
+                                                echo '<tr>
+                                                <td>' . $name . '</td>
+                                                <td>' . $email . '</td>
+                                                <td>' . $phone . '</td>
+                                                <td>' . $gender . '</td>
+                                                <td>' . $usertype . '</td>
+                                                <td>
+                                                    <button><a href="editUser.php?id=' . $id . '">Update</a></button>
+                                                    <button><a href="deleteProducts.php?id=' . $id . '">Delete</a></button>
+                                                </td>   
+                                                </tr>';
+                                            }
+                                        }
+
+                                        ?>
                                     </tr>
-                                    <tr>
-                                        <td>Riyaz</td>
-                                        <td>r@gmail.com</td>
-                                        <td>Employee</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Karim</td>
-                                        <td>k@gmail.com</td>
-                                        <td>user</td>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -188,26 +218,24 @@
 
 
 
-    <script>
-
+    <!-- <script>
         function showResult(str) {
             if str.length == 0) {
-                document.getElementById("search").innerHTML = "";
-                document.getElementById("search").style.border = "0px";
-                return;
-            }
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("search").innerHTML = this.responseText;
-                    document.getElementById("search").style.border = "1px solid #A5ACB2";
-                }
-            }
-            xmlhttp.open("GET", "search.php?q=" + str, true);
-            xmlhttp.send();
+            document.getElementById("search").innerHTML = "";
+            document.getElementById("search").style.border = "0px";
+            return;
         }
-
-    </script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("search").innerHTML = this.responseText;
+                document.getElementById("search").style.border = "1px solid #A5ACB2";
+            }
+        }
+        xmlhttp.open("GET", "search.php?q=" + str, true);
+        xmlhttp.send();
+        }
+    </script> -->
 </body>
 
 </html>

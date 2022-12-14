@@ -30,9 +30,12 @@ function insertUser($user)
     return $status;
 }
 
-function editUser($user)
+function updateUser($id)
 {
-
+    $con = getConnection();
+    $query = "select * from users where id='$id'";
+    $users = mysqli_query($con, $query);
+    return $users;
 }
 
 function deleteUser($user)

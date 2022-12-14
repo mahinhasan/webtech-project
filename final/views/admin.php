@@ -13,10 +13,13 @@
 
 <body>
     <?php
-          require_once "../models/blogModel.php";
-          $data = displayAllTable();
-
-    $row = mysqli_num_rows($data); 
+    require_once "../models/blogModel.php";
+    require_once "../models/userModel.php";
+    $data = displayAllTable();
+    $users = displayAllUser();
+    
+    $row = mysqli_num_rows($data);
+    $user = mysqli_num_rows($users)
 
     ?>
 
@@ -115,7 +118,9 @@
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1><?php echo $row ?></h1>
+                        <h1>
+                            <?php echo $row ?>
+                        </h1>
                         <span>Blog</span>
                     </div>
                     <div>

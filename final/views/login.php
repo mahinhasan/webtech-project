@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION["username"])){
+    $welcomeMsg = "<p align='right'>Welcome, </p>" .$_SESSION["username"];
+    header("Location:index.php");
+}
+?>
+
 <html >
 
 <head>

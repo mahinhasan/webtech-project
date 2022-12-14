@@ -56,4 +56,12 @@ function getUser($id){
         return $result; 
     }
 }
+
+function displayAllUser(){
+    $conn = getConnection();
+    $sql = "select * from users";
+    $res = mysqli_query($conn, $sql);
+    return $res;
+}
+
 ?>

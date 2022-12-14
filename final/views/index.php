@@ -18,8 +18,18 @@ session_start();
             </div>
             <ul>
                 <li class="logo"><a href="index.php"> Toursim</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="signup.php">Signup</a></li>
+                <?php if($_SESSION['status']){
+                  echo "<li>" . "<a href='logout.php'>logout</a>" . "</li>";
+
+                }
+                else{
+                  echo "<li>" . "<a href='login.php'>logout</a>" . "</li>";
+                  echo "<li>" . "<a href='singup.php'>logout</a>" . "</li>";
+
+                }
+
+                ?>
+ 
                 <li><a href="about.asp">About</a></li>
                 <li><a href="about.php">Author</a></li>
                 <li><a href="news.asp">Travel News</a></li>
@@ -40,11 +50,13 @@ session_start();
            <!-- <img src="images>/hero-bg.jpeg" alt="">  -->
           <h1 id="find">Find Your Next<br>
             Tour Destinations</h1>
-           <div class="search">
-            <input id="search-box" type="text " placeholder="Enter Packege Name" >
+            <form action="searchData.php" method="post">
+            <div class="search">
+            <input id="search-box" type="text " name="search" placeholder="Enter Packege Name" >
             <a href="">Search</a>
-            <p id="calender"> <i class="fas fa-calendar-week"></i> Blikhola Haor Premium Trip ( SABBIR'S Boat) -> 12 Booking Left</p>
            </div>
+            </form>
+          
             
         </div>
       </div>

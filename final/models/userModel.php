@@ -30,7 +30,7 @@ function insertUser($user)
     return $status;
 }
 
-function updateUser($id)
+function getUserId($id)
 {
     $con = getConnection();
     $query = "select * from users where id='$id'";
@@ -38,9 +38,12 @@ function updateUser($id)
     return $users;
 }
 
-function deleteUser($user)
+function updateUser($user)
 {
-
+    $con = getConnection();
+    $query = "update users set  username='{$user['username']}', '{$user['email']}',password='{$user['password']}', pswrepeat='{$user['pswrepeat']}',phone='{$user['phone']}',gender='{$user['gender']}', usertype='{$user['usertype']}' where id='{$user['id']}'";
+    $res = mysqli_query($con, $query);
+    return $res;
 }
 
 function allUser($user)

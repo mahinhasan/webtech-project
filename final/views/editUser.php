@@ -22,7 +22,7 @@ include_once('../models/userModel.php');
 <?php
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $res = updateUser($id);
+    $res = getUserId($id);
 
     if(mysqli_num_rows($res)){
         
@@ -35,11 +35,20 @@ if(isset($_GET['id'])){
       
     <fieldset >
     <legend align="center"><h2 style="text-align: center;">Update User </h2></legend>
-    <form name="myForm" method="post" action="../controllers/users/regiCheck.php" onsubmit="return (validate());">
+    <?php 
+        if(isset($_SESSION['message'])){
+            ?>
+            <strong>Hey! <?=$_SESSION['message'] ?></strong>
+            <?php
+        }
+
+?>
+    <form name="myForm" method="post" action="../controllers/users/editCheck.php" onsubmit="return (validate());">
         <div class="register">
-            
+        <input type="hidden" name="id" value="<?=$r['id'] ?>" id="name"><br>
+
             <label for="name"><b>User Name : </b></label><br>
-            <input type="text" name="name" value="<?=$r['username'] ?>" id="name"><br>
+            <input type="text" name="username" value="<?=$r['username'] ?>" id="name"><br>
             <span id="error"></span>
 
             <label for="email"><b>Email</b></label><br>
@@ -66,13 +75,13 @@ if(isset($_GET['id'])){
 
             <label for="usertype"><b>User Type :</b></label><br>
             <select name="usertype" id="cars" value="<?=$r['usertype'] ?>">
-                <option value="-1" selected>Select Type</option>
+                <option name="usertype" value="<?=$r['usertype'] ?>" selected>Select Type</option>
 
-                <option value="user">user</option>
-                <option value="admin">admin</option>
+                <option name="usertype" value="<?=$r['usertype'] ?>">user</option>
+                <option name="usertype" value="<?=$r['usertype'] ?>">admin</option>
             </select><br>
            
-            <input type="submit" class="registerbtn" value="Register"><br>
+            <input type="submit" name="update" class="registerbtn" value="Update User"><br>
             <p>If You have already register <a href="">login</a></p>
         </div>
 

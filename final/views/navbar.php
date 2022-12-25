@@ -31,6 +31,8 @@
                
 
                 <li><a href="planing.php">Planing</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="admin.php">Admin</a></li>
                 <li><a href="about.php">Author</a></li>
                 <li><a href="index.php">Home</a></li>
             </ul>

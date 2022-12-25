@@ -52,14 +52,15 @@
                 <li>
                     <a class="active" href="index.php"><span class="fas fa-igloo"></span><span>Dasboard</span></a>
                 </li>
+
+                <li>
+                    <a href="index.php"><span class="fas fa-home"></span><span>Home</span></a>
+                </li>
                 <li>
                     <a href="planing.php"><span class="fas fa-users"></span><span>User</span></a>
                 </li>
                 <li>
-                    <a href="index.php"><span class="fas fa-users"></span><span>Home</span></a>
-                </li>
-                <li>
-                    <a href="hotel.php"><span class="fas fa-home"></span><span>Hotel</span></a>
+                    <a href="hotel.php"><span class="fas fa-hotel"></span><span>Hotel</span></a>
                 </li>
                 <li>
                     <a href="#"><span class="fas  fa-people-carry"></span><span>Guide</span></a>
@@ -195,7 +196,7 @@
                                                 <td>' . $usertype . '</td>
                                                 <td>
                                                     <button><a href="editUser.php?id=' . $id . '">Update</a></button>
-                                                    <button><a href="deleteProducts.php?id=' . $id . '">Delete</a></button>
+                                                    <button><a href="deleteUser.php?id=' . $id . '">Delete</a></button>
                                                 </td>   
                                                 </tr>';
                                             }
